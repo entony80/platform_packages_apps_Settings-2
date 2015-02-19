@@ -127,8 +127,16 @@
 
         <activity android:name=".Settings$WirelessSettings"
             android:label="@string/header_category_wireless_networks">
-            <intent-filter android:priority="4">
+            <intent-filter android:priority="5">
                 <action android:name="com.android.settings.category.wireless" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Settings$ZEPHYRSettings"
+            android:label="@string/keywords_zephyr">
+            <intent-filter android:priority="4">
+                <action android:name="com.android.settings.category.zephyr" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -176,6 +184,39 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+       <!-- The Vortex -->
+        <activity android:name="Settings$ZephyrSettingsActivity"
+                android:label="@string/zephyr_settings_title"
+                android:icon="@drawable/ic_vortex"
+                android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <intent-filter android:priority="3">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.zephyr" />
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.zephyr.ProcessStatsSummary" />
+        </activity>
+ 
+       <!-- Keep compatibility with old shortcuts. -->
+        <activity android:name="Settings$ZephyrSettingsActivity"
+                  android:label="@string/zephyr_settings_title"
+            android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.zephyr.AdditionalSettings" />
+        </activity>
+
+        <activity
+             android:name=".zephyr.AdditionalSettings" />
 
         <!-- Wireless Controls -->
 

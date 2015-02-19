@@ -140,6 +140,8 @@ import com.android.settingslib.drawer.SettingsDrawerActivity;
 import com.android.settingslib.drawer.Tile;
 
 import java.net.URISyntaxException;
+import com.android.settings.zephyr.AdditionalSettings;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -238,20 +240,14 @@ public class SettingsActivity extends SettingsDrawerActivity
 
     private static final String ACTION_TIMER_SWITCH = "qualcomm.intent.action.TIMER_SWITCH";
 
-<<<<<<< HEAD
     private static final String LTE_4G_FRAGMENT = "com.android.settings.Lte4GEnableSetting";
     private static final String PROFILEMGR_MAIN_FRAGMENT = "com.android.settings.ProfileMgrMain";
     private static final String MOBILENETWORK_FRAGMENT = "com.android.settings.MobileNetworkMain";
     private static final String SYSTEM_UPDATE = "android.settings.SystemUpdateActivity";
-=======
     private static final String SUPERSU_FRAGMENT = "com.android.settings.SuperSU";
 
-<<<<<<< HEAD
->>>>>>> ab76e47... Add SuperSu to settings dashboard
-=======
     private static final String SUBSTRATUM_FRAGMENT = "com.android.settings.Substratum";
 
->>>>>>> 7c7f6c5... Add Substratum dashboard tile
     private String mFragmentClass;
     private String mActivityAction;
 
@@ -394,7 +390,8 @@ public class SettingsActivity extends SettingsDrawerActivity
             MasterClear.class.getName(),
             NightDisplaySettings.class.getName(),
             ManageDomainUrls.class.getName(),
-            AutomaticStorageManagerSettings.class.getName()
+            AutomaticStorageManagerSettings.class.getName(),
+            AdditionalSettings.class.getName()
     };
 
 
@@ -600,6 +597,7 @@ public class SettingsActivity extends SettingsDrawerActivity
 
         mIsShowingDashboard = className.equals(Settings.class.getName())
                 || className.equals(Settings.WirelessSettings.class.getName())
+                || className.equals(Settings.AdditionalSettings.class.getName())
                 || className.equals(Settings.DeviceSettings.class.getName())
                 || className.equals(Settings.PersonalSettings.class.getName())
                 || className.equals(Settings.WirelessSettings.class.getName());
@@ -1072,7 +1070,6 @@ public class SettingsActivity extends SettingsDrawerActivity
     private Fragment switchToFragment(String fragmentName, Bundle args, boolean validate,
             boolean addToBackStack, int titleResId, CharSequence title, boolean withTransition) {
 
-<<<<<<< HEAD
         if (fragmentName.equals(getString(R.string.qtifeedback_intent_action))){
              final Intent newIntent = new Intent(getString(R.string.qtifeedback_intent_action));
              newIntent.addCategory("android.intent.category.DEFAULT");
@@ -1112,7 +1109,6 @@ public class SettingsActivity extends SettingsDrawerActivity
             return null;
         }
 
-=======
         if (SUPERSU_FRAGMENT.equals(fragmentName)) {
             Intent superSUIntent = new Intent();
             superSUIntent.setClassName("eu.chainfire.supersu", "eu.chainfire.supersu.MainActivity");
@@ -1120,9 +1116,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             finish();
             return null;
         }
-<<<<<<< HEAD
->>>>>>> ab76e47... Add SuperSu to settings dashboard
-=======
+
         if (SUBSTRATUM_FRAGMENT.equals(fragmentName)) {
             Intent subIntent = new Intent();
             subIntent.setClassName("projekt.substratum", "projekt.substratum.LaunchActivity");
@@ -1130,7 +1124,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             finish();
             return null;
         }
->>>>>>> 7c7f6c5... Add Substratum dashboard tile
+
         if (validate && !isValidFragment(fragmentName)) {
             throw new IllegalArgumentException("Invalid fragment for this activity: "
                     + fragmentName);

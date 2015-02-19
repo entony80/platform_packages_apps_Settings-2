@@ -37,4 +37,14 @@
    <string name="display_category_wakeup_options_title">Wakeup options</string>
    <string name="wakeup_when_plugged_unplugged_title">Wake up on charge</string>
    <string name="wakeup_when_plugged_unplugged_summary">Wake up device if charger is plugged/unplugged.</string>
+
+    <!-- The Vortex -->
+    <string name="zephyr_settings_title">The Vortex</string>
+    <string name="keywords_zephyr">Zephyr Tweaks</string>
+    <!-- Lock screen settings -->
+    <string name="lock_screen_title">Lock screen</string>
+    <!-- Status bar-->
+    <string name="status_bar_title">Status bar</string>
+    <!-- Notification drawer settings -->
+    <string name="notification_drawer_title">Notification drawer</string>
 </resources>
