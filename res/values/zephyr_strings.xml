@@ -239,4 +239,6 @@
     <string name="qs_rows_portrait_title">Rows (portrait)</string>
     <string name="qs_rows_landscape_title">Rows (landscape)</string>
     <string name="qs_columns_title">Columns</string>
+    <!--Navigation bar category -->
+    <string name="navigation_bar_title">Navigation bar</string>
 </resources>
