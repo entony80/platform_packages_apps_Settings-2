@@ -65,7 +65,7 @@ public class ColorPickerPreference extends Preference implements
     private String mResetColor1Title = null;
     private String mResetColor2Title = null;
     private int mValue;
-    private boolean mAlphaSliderVisible = false;
+    private boolean mAlphaSliderVisible = true;
 
     public ColorPickerPreference(Context context) {
         this(context, null);
