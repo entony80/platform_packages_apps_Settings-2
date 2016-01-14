@@ -47,5 +47,10 @@
         android:key="zephyr_clock_settings"
         android:title="@string/clock_settings_title"
         android:summary="@string/clock_settings_summary" />
+
+    <Preference
+           android:key="ticker"
+           android:title="@string/ticker_screen_title"
+           android:fragment="com.android.settings.zephyr.StatusBarTickerSettings" />
 </PreferenceScreen>
 
