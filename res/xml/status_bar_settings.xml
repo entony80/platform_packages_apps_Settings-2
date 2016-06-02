@@ -36,5 +36,11 @@
         android:title="@string/network_traffic_title"
         android:summary="@string/network_traffic_summary"
         android:fragment="com.android.settings.zephyr.NetworkTraffic" />
+
+    <PreferenceScreen
+        android:fragment="com.android.settings.zephyr.ClockSettings"
+        android:key="zephyr_clock_settings"
+        android:title="@string/clock_settings_title"
+        android:summary="@string/clock_settings_summary" />
 </PreferenceScreen>
 
