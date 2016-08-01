@@ -5,5 +5,7 @@
     <!-- Dashboard -->
     <string name="supersu_title">SuperSU</string>
     <string name="substratum_title">Substratum</string>
+
+    <!-- Phone info shortcut -->
+    <string name="device_info_title">Phone info</string>
 </resources>
- 
