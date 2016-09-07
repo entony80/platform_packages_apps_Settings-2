@@ -36,7 +36,7 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
+import net.zephyr.colorpicker.preference.ColorPickerPreference;
 
 public class StatusBarTickerSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
