@@ -15,6 +15,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
  <!-- Zephyr build date-->
+   <string name="zephyr_version">Zephyr-N Build</string>
+   <string name="cpu_info">CPU</string>
+   <string name="mem_info">Memory</string>
    <string name="build_date">Zephyr-N build date</string>
    <string name="build_date_default">2014-01-01-0000</string>
     <!-- Vendor version -->
