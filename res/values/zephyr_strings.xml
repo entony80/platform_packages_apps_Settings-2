@@ -256,4 +256,7 @@
     <string name="device_maintainer">Device maintainer</string>
     <string name="device_maintainers">Device maintainers</string>
     <string name="zephyr_device_maintainer">Device maintainer</string>
+
+    <!-- lock screen visualizer -->
+    <string name="lockscreen_visualizer_title">Display music visualizer</string>
 </resources>
