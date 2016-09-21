@@ -29,8 +29,8 @@ import android.preference.SwitchPreference;
 import android.provider.Settings;
 import com.android.settings.R;
 
-import com.android.internal.util.simpleaosp.PowerMenuConstants;
-import static com.android.internal.util.simpleaosp.PowerMenuConstants.*;
+import com.android.internal.util.jdcteam.PowerMenuConstants;
+import static com.android.internal.util.jdcteam.PowerMenuConstants.*;
 import com.android.settings.Utils;
 import java.util.Arrays;
 import java.util.ArrayList;

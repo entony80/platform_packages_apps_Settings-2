@@ -20,8 +20,9 @@ import android.view.ViewGroup;
 
 import com.android.settings.zephyr.StatusBarSettings;
 import com.android.settings.zephyr.LockScreenSettings;
-import com.android.settings.zephyr.PagerSlidingTabStrip;
 import com.android.settings.zephyr.NavigationBarSettings;
+import com.android.settings.zephyr.NotificationDrawerSettings;
+import com.android.settings.zephyr.PagerSlidingTabStrip;
 import com.android.settings.R;
 import com.android.settings.dashboard.SummaryLoader;
 import com.android.settings.Utils;
@@ -108,8 +109,8 @@ public class AdditionalSettings extends SettingsPreferenceFragment {
         String titleString[];
         titleString = new String[]{
 		    getString(R.string.status_bar_title),
-                    getString(R.string.navigation_bar_title),
                     getString(R.string.notification_drawer_title),
+                    getString(R.string.navigation_bar_title),
   		    getString(R.string.lock_screen_title)};
         return titleString;
     }

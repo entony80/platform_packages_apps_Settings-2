@@ -141,6 +141,10 @@ import com.android.settingslib.drawer.Tile;
 
 import java.net.URISyntaxException;
 import com.android.settings.zephyr.AdditionalSettings;
+import com.android.settings.du.nav.FlingSettings;
+import com.android.settings.du.nav.NavbarSettings;
+import com.android.settings.du.nav.SmartbarSettings;
+import com.android.settings.du.nav.PulseSettings;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -391,7 +395,11 @@ public class SettingsActivity extends SettingsDrawerActivity
             NightDisplaySettings.class.getName(),
             ManageDomainUrls.class.getName(),
             AutomaticStorageManagerSettings.class.getName(),
-            AdditionalSettings.class.getName()
+            AdditionalSettings.class.getName(),
+            NavbarSettings.class.getName(),
+            FlingSettings.class.getName(),
+            SmartbarSettings.class.getName(),
+            PulseSettings.class.getName()
     };
 
 
