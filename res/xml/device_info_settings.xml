@@ -23,6 +23,7 @@
 	      <Preference android:key="zephyr_version"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/zephyr_version"
+                android:icon="@drawable/zos_brand_logo"
                 android:summary="@string/device_info_default" />
 
         <!-- Device status - launches activity -->
@@ -140,7 +141,7 @@
                 android:shouldDisableView="false"
                 android:title="@string/build_number"
                 android:summary="@string/device_info_default"/>
-                
+
         <!-- Zephyr build date -->
         <Preference android:key="build_date"
                 style="?android:preferenceInformationStyle"
