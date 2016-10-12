@@ -14,8 +14,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
- <!-- Zephyr build date-->
+   <!-- Zephyr build date-->
    <string name="zephyr_version">Zephyr-N Build</string>
+
+   <!-- Zephyr build date-->
+   <string name="zephyr_version_default">Zephyr-N Version</string>
+   <string name="zephyr_version">Pen pineapple apple pen</string>
    <string name="cpu_info">CPU</string>
    <string name="mem_info">Memory</string>
    <string name="build_date">Zephyr-N build date</string>
@@ -233,4 +237,9 @@
     <!-- Add application dialog box title -->
     <string name="profile_choose_app">Choose app</string>
     <string name="reset">Reset</string>
+    <!-- Quick settings tiles columns and rows config -->
+    <string name="qs_layout_category">Rows and columns</string>
+    <string name="qs_rows_portrait_title">Rows (portrait)</string>
+    <string name="qs_rows_landscape_title">Rows (landscape)</string>
+    <string name="qs_columns_title">Columns</string>
 </resources>
