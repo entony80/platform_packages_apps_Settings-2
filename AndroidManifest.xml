@@ -197,7 +197,7 @@
             <meta-data android:name="com.android.settings.category"
                 android:value="com.android.settings.category.zephyr" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.zephyr.ProcessStatsSummary" />
+                android:value="com.android.settings.zephyr.AdditionalSettings" />
         </activity>
  
        <!-- Keep compatibility with old shortcuts. -->
@@ -211,9 +211,6 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.zephyr.AdditionalSettings" />
         </activity>
-
-        <activity
-             android:name=".zephyr.AdditionalSettings" />
 
         <activity android:name=".batterylight.NotificationLightSettings" />
         <activity android:name=".batterylight.BatteryLightSettings" />

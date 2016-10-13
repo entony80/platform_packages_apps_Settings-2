@@ -40,6 +40,7 @@
    <string name="wakeup_when_plugged_unplugged_summary">Wake up device if charger is plugged/unplugged.</string>
 
     <!-- The Vortex -->
+    <string name="build_tweaks_summary_title">Home of Features</string>
     <string name="zephyr_settings_title">The Vortex</string>
     <string name="keywords_zephyr">Zephyr Tweaks</string>
     <!-- Lock screen settings -->
@@ -314,3 +315,4 @@
     <string name="block_on_secure_keyguard_title">Disable quick settings on lock screen</string>
     <string name="block_on_secure_keyguard_summary">Disables quick settings on secure lockscreen</string>  
 </resources>
+
