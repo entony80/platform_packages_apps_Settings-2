@@ -163,6 +163,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         }
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
         setValueSummary(KEY_ZEPHYR_VERSION, "ro.zephyr.version");
+        findPreference(KEY_ZEPHYR_VERSION).setEnabled(true);
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);

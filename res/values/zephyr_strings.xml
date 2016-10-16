@@ -15,11 +15,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
    <!-- Zephyr build date-->
-   <string name="zephyr_version">Zephyr-N Build</string>
-
-   <!-- Zephyr build date-->
-   <string name="zephyr_version_default">Zephyr-N Version</string>
-   <string name="zephyr_version">Pen pineapple apple pen</string>
+   <string name="zephyr_version">Zephyr-N Version</string>
+   <string name="zephyr_version_default">Unknown</string>
    <string name="cpu_info">CPU</string>
    <string name="mem_info">Memory</string>
    <string name="build_date">Zephyr-N build date</string>
