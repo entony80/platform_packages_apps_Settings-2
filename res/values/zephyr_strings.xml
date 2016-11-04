@@ -314,5 +314,8 @@
     <!-- Disable QS on lockscreen -->
     <string name="block_on_secure_keyguard_title">Disable quick settings on lock screen</string>
     <string name="block_on_secure_keyguard_summary">Disables quick settings on secure lockscreen</string>  
+
+    <!-- Option to show brightness bar in quick settings -->
+    <string name="show_brightness">Show brightness slider</string>
 </resources>
 
