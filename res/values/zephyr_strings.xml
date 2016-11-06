@@ -345,5 +345,10 @@
     <string name="heads_up_snooze_10min">10 minutes</string>
     <string name="heads_up_snooze_15min">15 minutes</string>
     <string name="heads_up_snooze_20min">20 minutes</string>
+
+    <!-- Optional screenshot type -->
+    <string name="screenshot_type_title">Screenshot type</string>
+    <string name="screenshot_type_fullscreen">Take fullscreen screenshots</string>
+    <string name="screenshot_type_partial">Take screenshots of selectable area</string>
 </resources>
 
