@@ -15,12 +15,16 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
+import com.android.settings.zephyr.CustomSeekBarPreference;
+
 public class NotificationDrawerSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String QUICK_PULLDOWN = "quick_pulldown";
+    private static final String PREF_COLUMNS = "qs_layout_columns";
 
     private ListPreference mQuickPulldown;
+    private CustomSeekBarPreference mQsColumns;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,12 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
                 Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 1, UserHandle.USER_CURRENT);
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         updatePulldownSummary(quickPulldownValue);
+ 
+	mQsColumns = (CustomSeekBarPreference) findPreference(PREF_COLUMNS);
+        int columnsQs = Settings.System.getInt(resolver,
+                Settings.System.QS_LAYOUT_COLUMNS, 3);
+        mQsColumns.setValue(columnsQs / 1);
+        mQsColumns.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -52,7 +62,12 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
                     quickPulldownValue, UserHandle.USER_CURRENT);
             updatePulldownSummary(quickPulldownValue);
             return true;
-        }
+        } else if (preference == mQsColumns) {
+            int qsColumns = (Integer) objValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.QS_LAYOUT_COLUMNS, qsColumns * 1);
+	    return true;
+	}
         return false;
     }
 
