@@ -43,6 +43,9 @@
     <bool name="config_voice_over_lte_enabled">false</bool>
     <!-- Config voice over lte in wireless settings end -->
 
+    <!-- When true enable gesture setting. -->
+    <bool name="config_gesture_settings_enabled">true</bool>
+
     <!-- When true enable color temperature setting. -->
     <bool name="config_enableColorTemperature">false</bool>
 
@@ -110,9 +113,6 @@
     <!-- Double twist sensor name and vendor used by gesture setting -->
     <string name="gesture_double_twist_sensor_name" translatable="false"></string>
     <string name="gesture_double_twist_sensor_vendor" translatable="false"></string>
-
-    <!-- When true enable gesture setting. -->
-    <bool name="config_gesture_settings_enabled">false</bool>
 
     <!-- If the Storage Manager settings are enabled. -->
     <bool name="config_storage_manager_settings_enabled">false</bool>
