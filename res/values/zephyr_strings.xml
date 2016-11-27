@@ -164,9 +164,6 @@
    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
    <string name="unlock_quick_unlock_control_summary">Unlock automatically when the correct PIN/password is entered</string>
 
-    <!-- Option to show brightness bar in quick settings -->
-    <string name="show_brightness">Show brightness slider</string>
-
     <!-- LED notifications -->
     <string name="color_picker_dialog_title">Color</string>
     <string name="omni_battery_light_settings">Battery charging light</string>
@@ -702,5 +699,12 @@
 
     <string name="blur_cat_notice">Notice</string>
     <string name="blur_cat_notice_summary">Blur personlizations are disabled during Keyguard view! Only Translucent Notifications are enabled!</string>
+
+    <!-- Quick Settings brightness slider -->
+    <string name="qs_brightness_slider_title">Brightness slider</string>
+    <string name="qs_brightness_slider_summary">Show a brightness slider in the quick settings panel</string>
+
+    <string name="brightness_icon_title">Brightness icon </string>
+    <string name="brightness_icon_summary">Show a brightness icon to the left of the brighness slider to adjust auto-brightness</string>
 </resources>
 
