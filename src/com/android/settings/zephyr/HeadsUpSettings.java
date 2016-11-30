@@ -135,7 +135,7 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsEvent.SAOSP_TWEAKS;
+        return MetricsEvent.THE_VORTEX;
     }
 
     @Override
