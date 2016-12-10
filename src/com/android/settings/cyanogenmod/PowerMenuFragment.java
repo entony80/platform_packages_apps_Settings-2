@@ -74,8 +74,8 @@ public class PowerMenuFragment extends PreferenceFragment {
                 continue;
             }
 
-            if (action.equals(GLOBAL_ACTION_KEY_REBOOT)) {
-                mRebootPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_REBOOT);
+            if (action.equals(GLOBAL_ACTION_KEY_RESTART)) {
+                mRebootPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_RESTART);
             } else if (action.equals(GLOBAL_ACTION_KEY_SCREENSHOT)) {
                 mScreenshotPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_SCREENSHOT);
             } else if (action.equals(GLOBAL_ACTION_KEY_SCREENRECORD)) {
@@ -111,7 +111,7 @@ public class PowerMenuFragment extends PreferenceFragment {
         super.onStart();
 
         if (mRebootPref != null) {
-            mRebootPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_REBOOT));
+            mRebootPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_RESTART));
         }
 
         if (mScreenshotPref != null) {
@@ -187,7 +187,7 @@ public class PowerMenuFragment extends PreferenceFragment {
 
         if (preference == mRebootPref) {
             value = mRebootPref.isChecked();
-            updateUserConfig(value, GLOBAL_ACTION_KEY_REBOOT);
+            updateUserConfig(value, GLOBAL_ACTION_KEY_RESTART);
 
         } else if (preference == mScreenshotPref) {
             value = mScreenshotPref.isChecked();
