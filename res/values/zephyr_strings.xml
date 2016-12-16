@@ -659,5 +659,9 @@
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar tuner</string>
     <string name="navbar_tuner_summary">Customize buttons and layout</string>
+
+    <!-- Dynamic Navbar -->
+    <string name="nav_bar_dynamic_title">Dynamic navbar color</string>
+    <string name="nav_bar_dynamic_summary">Enable to adapt navbar color to apps primary dark color.Restart your desired app to see effect</string>
 </resources>
 
