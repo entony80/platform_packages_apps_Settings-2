@@ -29,8 +29,8 @@ import android.preference.SwitchPreference;
 import android.provider.Settings;
 import com.android.settings.R;
 
-import com.android.internal.util.jdcteam.PowerMenuConstants;
-import static com.android.internal.util.jdcteam.PowerMenuConstants.*;
+import com.android.internal.util.purenexus.PowerMenuConstants;
+import static com.android.internal.util.purenexus.PowerMenuConstants.*;
 import com.android.settings.Utils;
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -74,8 +74,8 @@ public class PowerMenuFragment extends PreferenceFragment {
                 continue;
             }
 
-            if (action.equals(GLOBAL_ACTION_KEY_RESTART)) {
-                mRebootPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_RESTART);
+            if (action.equals(GLOBAL_ACTION_KEY_REBOOT)) {
+                mRebootPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_REBOOT);
             } else if (action.equals(GLOBAL_ACTION_KEY_SCREENSHOT)) {
                 mScreenshotPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_SCREENSHOT);
             } else if (action.equals(GLOBAL_ACTION_KEY_SCREENRECORD)) {
@@ -111,7 +111,7 @@ public class PowerMenuFragment extends PreferenceFragment {
         super.onStart();
 
         if (mRebootPref != null) {
-            mRebootPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_RESTART));
+            mRebootPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_REBOOT));
         }
 
         if (mScreenshotPref != null) {
@@ -187,7 +187,7 @@ public class PowerMenuFragment extends PreferenceFragment {
 
         if (preference == mRebootPref) {
             value = mRebootPref.isChecked();
-            updateUserConfig(value, GLOBAL_ACTION_KEY_RESTART);
+            updateUserConfig(value, GLOBAL_ACTION_KEY_REBOOT);
 
         } else if (preference == mScreenshotPref) {
             value = mScreenshotPref.isChecked();
