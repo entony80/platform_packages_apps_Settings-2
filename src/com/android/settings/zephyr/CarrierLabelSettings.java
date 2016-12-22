@@ -34,7 +34,7 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.SeekBarPreference;
+import com.android.settings.zephyr.CustomSeekBarPreference;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -51,7 +51,7 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment
     private ListPreference mShowCarrierLabel;
     private String mCustomCarrierLabelText;
     private ColorPickerPreference mCarrierColorPicker;
-    private SeekBarPreference mStatusBarCarrierSize;
+    private CustomSeekBarPreference mStatusBarCarrierSize;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -83,9 +83,9 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment
             mCarrierColorPicker.setSummary(hexColor);
             mCarrierColorPicker.setNewPreviewColor(intColor);
 
-        mStatusBarCarrierSize = (SeekBarPreference) findPreference(STATUS_BAR_CARRIER_FONT_SIZE);
-        mStatusBarCarrierSize.setProgress(Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.STATUS_BAR_CARRIER_FONT_SIZE, 10));
+        mStatusBarCarrierSize = (CustomSeekBarPreference) findPreference(STATUS_BAR_CARRIER_FONT_SIZE);
+        mStatusBarCarrierSize.setValue(Settings.System.getInt(resolver,
+                    Settings.System.STATUS_BAR_CARRIER_FONT_SIZE, 14));
         mStatusBarCarrierSize.setOnPreferenceChangeListener(this);
 
     }
