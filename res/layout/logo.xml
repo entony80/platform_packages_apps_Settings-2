@@ -20,6 +20,5 @@
  	android:layout_height="100dp"
 	android:src="@drawable/logo"
 	android:adjustViewBounds="true"
-	android:scaleType="centerInside"
-	android:tint="?android:attr/colorAccent" />
+	android:scaleType="centerInside" />
 </LinearLayout>
