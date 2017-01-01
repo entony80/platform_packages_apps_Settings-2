@@ -42,7 +42,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.android.providers.Settings;
+import android.provider.Settings;
 import com.android.settings.zephyr.CustomSeekBarPreference;
 
 public class BlurPersonalizations extends SettingsPreferenceFragment
