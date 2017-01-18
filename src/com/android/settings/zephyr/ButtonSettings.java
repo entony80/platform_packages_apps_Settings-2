@@ -210,3 +210,4 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
         }
         return false;
     }
+}

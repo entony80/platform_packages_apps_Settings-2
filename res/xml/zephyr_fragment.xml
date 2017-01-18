@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/zephyr_fragment_title" >
+<PreferenceScreen android:layout="@layout/logo" android:key="zephyr_logo" />
+	<!-- Zephyr version -->
+              <Preference android:key="zephyr_version"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/zephyr_version"
+                android:summary="@string/zephyr_version_default"
+                android:icon="@drawable/zos_brand_logo" />
+
+
+	<!-- About Zephyr -->
+        <PreferenceScreen
+            android:key="about"
+            android:title="@string/about_zephyr"
+	    android:summary="@string/about_zephyr_summary"
+            android:fragment="com.android.settings.zephyr.AboutZephyr" />
+
+	<!-- Changelog -->
+        <PreferenceScreen
+            android:key="changelog"
+            android:title="@string/changelog_zephyr_title"
+            android:fragment="com.android.settings.zephyr.Changelog"
+	    android:summary="@string/changelog_summary" />
+
+	<!-- Zephyr build date -->
+        <Preference android:key="build_date"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/build_date"
+                android:summary="@string/build_date_default" />
+
+	<!-- Device Maintainers -->
+        <Preference
+                android:key="device_maintainer"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/device_maintainer"
+                android:summary="@string/zephyr_device_maintainer" />
+</PreferenceScreen>

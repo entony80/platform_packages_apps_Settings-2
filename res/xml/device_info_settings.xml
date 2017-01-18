@@ -19,13 +19,6 @@
         android:title="@string/about_settings">
 <PreferenceScreen android:layout="@layout/logo" android:key="zephyr_logo" />
 
-        <!-- Zephyr version -->
-	      <Preference android:key="zephyr_version"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/zephyr_version"
-                android:summary="@string/zephyr_version_default" 
-                android:icon="@drawable/zos_brand_logo" />
-
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status"
@@ -80,13 +73,6 @@
                 android:shouldDisableView="false"
                 android:title="@string/firmware_version"
                 android:summary="@string/device_info_default"/>
-
-        <!-- Device Maintainers -->
-        <Preference
-                android:key="device_maintainer"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/device_maintainer"
-                android:summary="@string/zephyr_device_maintainer" />
 
         <!-- Security patch level -->
         <PreferenceScreen android:key="security_patch"
@@ -148,12 +134,6 @@
                 android:shouldDisableView="false"
                 android:title="@string/build_number"
                 android:summary="@string/device_info_default"/>
-
-        <!-- Zephyr build date -->
-        <Preference android:key="build_date"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/build_date"
-                android:summary="@string/build_date_default" />
 
         <!-- Device QGP version -->
         <Preference android:key="qgp_version"

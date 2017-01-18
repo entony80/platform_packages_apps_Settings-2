@@ -734,5 +734,32 @@
     <string name="expanded_desktop_style">Expanded desktop style</string>
     <string name="expanded_desktop_style_description">Choose a default expanded desktop style</string>
     <string name="expanded_desktop_title">Expanded desktop options</string>
+
+    <!-- Changelog -->
+    <string name="changelog_zephyr_title">Changelog</string>
+    <string name="changelog_zephyr_error">Unable to load changelog</string>
+    <string name="changelog_summary">Quick peek on an update</string>
+
+    <!-- About Zephyr -->
+    <string name="zephyr_fragment_title">Zephyr</string>
+    <string name="about_zephyr">About ZephyrOS</string>
+    <string name="share_zephyr_title">Share ZephyrOS</string>
+    <string name="share_zephyr_summary">Let everyone know you are a Zephyr user</string>
+    <string name="share_message">get to know about #ZephyrOS @ https://plus.google.com/u/0/communities/101103673497024297251</string>
+    <string name="share_chooser_title">Share ZephyrOS</string>
+    <string name="zephyr_source_title">Github</string>
+    <string name="zephyr_source_summary">Build Zephyr for any device</string>
+    <string name="zephyr_google_plus_title">Google+</string>
+    <string name="zephyr_google_plus_summary">Visit our G+ page for support and news</string>
+    <string name="team_zephyr_title">TeamZephyr</string>
+    <string name="zephyr_telegram_title">Telegram</string>
+    <string name="zephyr_telegram_summary">Get Updates on News and Device builds via telegram</string>
+    <string name="team_zephyr">The CREW</string>
+    <string name="github_StarkDroid">https://github.com/StarkDroid</string>
+    <string name="about_zephyr_summary">All you need to know about Zephyr</string>
+
+    <!-- Maintainers -->
+    <string name="maintainers_zephyr_title">ZephyrOS maintainers</string>
+    <string name="maintainers_zephyr_error">Unable to load maintainers list</string>
 </resources>
 

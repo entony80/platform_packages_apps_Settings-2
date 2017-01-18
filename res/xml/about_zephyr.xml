@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2016 crDroid Android
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+        android:title="@string/about_zephyr">
+
+	<!-- Team Zephyr -->
+        <PreferenceScreen
+            android:key="devs"
+            android:title="@string/team_zephyr_title"
+            android:fragment="com.android.settings.zephyr.TeamZephyr" 
+	    android:icon="@drawable/maintainers" />
+
+        <!-- Zephyr Share -->
+        <PreferenceScreen
+            android:key="share"
+            android:title="@string/share_zephyr_title"
+            android:summary="@string/share_zephyr_summary" 
+	    android:icon="@drawable/share" />
+
+        <!-- Zephyr Github -->
+        <PreferenceScreen
+            android:key="zephyr_source"
+            android:title="@string/zephyr_source_title"
+            android:summary="@string/zephyr_source_summary"
+	    android:icon="@drawable/github" />
+
+	<!-- Zephyr Telegram -->
+        <PreferenceScreen
+            android:key="zephyr_telegram"
+            android:title="@string/zephyr_telegram_title"
+            android:summary="@string/zephyr_telegram_summary"
+            android:icon="@drawable/telegram" />
+
+        <!-- Zephyr GooglePlus -->
+        <PreferenceScreen
+            android:key="zephyr_google_plus"
+            android:title="@string/zephyr_google_plus_title"
+            android:summary="@string/zephyr_google_plus_summary"
+	    android:icon="@drawable/gplus" />
+
+        <!-- Maintainers -->
+        <PreferenceScreen
+            android:key="maintainers"
+            android:title="@string/maintainers_zephyr_title"
+            android:fragment="com.android.settings.zephyr.Maintainers" 
+            android:icon="@drawable/maintainers" />
+
+</PreferenceScreen>

@@ -141,6 +141,7 @@ import com.android.settingslib.drawer.Tile;
 
 import java.net.URISyntaxException;
 import com.android.settings.zephyr.AdditionalSettings;
+import com.android.settings.zephyr.AboutPhoneSettings;
 import com.android.settings.du.nav.FlingSettings;
 import com.android.settings.du.nav.NavbarSettings;
 import com.android.settings.du.nav.SmartbarSettings;
@@ -288,7 +289,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             Settings.AccountSettingsActivity.class.getName(),
             //system_section
             Settings.DateTimeSettingsActivity.class.getName(),
-            Settings.DeviceInfoSettingsActivity.class.getName(),
+	    Settings.AboutPhoneSettingsActivity.class.getName(),
             Settings.AccessibilitySettingsActivity.class.getName(),
             Settings.PrintSettingsActivity.class.getName(),
             Settings.PaymentSettingsActivity.class.getName(),
@@ -317,7 +318,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             UserDictionarySettings.class.getName(),
             HomeSettings.class.getName(),
             DisplaySettings.class.getName(),
-            DeviceInfoSettings.class.getName(),
+	    AboutPhoneSettings.class.getName(),
             ManageApplications.class.getName(),
             NotificationApps.class.getName(),
             ManageAssist.class.getName(),
@@ -399,7 +400,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             NavbarSettings.class.getName(),
             FlingSettings.class.getName(),
             SmartbarSettings.class.getName(),
-            PulseSettings.class.getName()
+            PulseSettings.class.getName(),
     };
 
 
@@ -1278,11 +1279,6 @@ public class SettingsActivity extends SettingsDrawerActivity
                 Settings.PrintSettingsActivity.class.getName()),
                 (!getResources().getBoolean(R.bool.config_settings_rjil_layout))
                 &&pm.hasSystemFeature(PackageManager.FEATURE_PRINTING), isAdmin, pm);
-
-        //deviceinfo disable in RJIL
-        setTileEnabled(new ComponentName(packageName,
-                        Settings.DeviceInfoSettingsActivity.class.getName()),
-                !getResources().getBoolean(R.bool.config_settings_rjil_layout), isAdmin, pm);
 
         //other settings visible in RJIL
         setTileEnabled(new ComponentName(packageName,

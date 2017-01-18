@@ -45,7 +45,7 @@ import android.os.UserManager;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.support.v14.preference.SwitchPreference;
- import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.DropDownPreference;
 import android.support.v14.preference.MultiSelectListPreference;
 import android.support.v7.preference.ListPreference;
@@ -122,6 +122,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
     private static final String KEY_VOLUME_ROCKER_WAKE = "volume_rocker_wake";
+
+    private static final String KEY_NETWORK_NAME_DISPLAYED = "network_operator_display";
+    private static final String SHOW_NETWORK_NAME_MODE = "show_network_name_mode";
+    private static final int SHOW_NETWORK_NAME_ON = 1;
+    private static final int SHOW_NETWORK_NAME_OFF = 0;
 
     private static final String FONT_SIZE_MINIMUM = "0.95";
     private static final String FONT_SIZE_SMALL = "1.0";
