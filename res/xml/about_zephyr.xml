@@ -19,7 +19,7 @@
             android:key="devs"
             android:title="@string/team_zephyr_title"
             android:fragment="com.android.settings.zephyr.TeamZephyr" 
-	    android:icon="@drawable/maintainers" />
+	    android:icon="@drawable/zos_brand_logo" />
 
         <!-- Zephyr Share -->
         <PreferenceScreen

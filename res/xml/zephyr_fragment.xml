@@ -2,14 +2,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/zephyr_fragment_title" >
-<PreferenceScreen android:layout="@layout/logo" android:key="zephyr_logo" />
 	<!-- Zephyr version -->
               <Preference android:key="zephyr_version"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/zephyr_version"
-                android:summary="@string/zephyr_version_default"
-                android:icon="@drawable/zos_brand_logo" />
-
+                android:summary="@string/zephyr_version_default" />
 
 	<!-- About Zephyr -->
         <PreferenceScreen
