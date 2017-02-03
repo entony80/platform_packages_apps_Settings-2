@@ -1,4 +1,4 @@
-package com.android.settings.widget;
+package com.android.settings.widgets;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,16 +11,19 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.net.http.AndroidHttpClient;
 import android.os.AsyncTask;
-import android.preference.Preference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.Display;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.LayoutInflater;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.LinearLayout;
 
 import com.android.settings.R;
 import com.koushikdutta.urlimageviewhelper.UrlImageViewCallback;
@@ -36,11 +39,11 @@ import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpParams;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-public class DeveloperPreference extends Preference {
 
+public class DeveloperPreference extends LinearLayout {
     private static final String TAG = "DeveloperPreference";
     public static final String GRAVATAR_API = "http://www.gravatar.com/avatar/";
-    public static int mDefaultAvatarSize = 250;
+    public static int mDefaultAvatarSize = 400;
     private ImageView gplusButton;
     private ImageView githubButton;
     private ImageView photoView;
@@ -51,45 +54,51 @@ public class DeveloperPreference extends Preference {
     private String gplusName;
     private String githubLink;
     private String devEmail;
-    private final Display mDisplay;
+
+    public DeveloperPreference(Context context) {
+        this(context, null);
+    }
 
     public DeveloperPreference(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs, 0);
+    }
+
+    @Override
+    public boolean isInEditMode() {
+        return true;
+    }
+
+    public DeveloperPreference(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
 
         TypedArray typedArray = null;
         try {
             typedArray = context.obtainStyledAttributes(attrs, R.styleable.DeveloperPreference);
             nameDev = typedArray.getString(R.styleable.DeveloperPreference_nameDev);
             gplusName = typedArray.getString(R.styleable.DeveloperPreference_gplusHandle);
-	    githubLink = typedArray.getString(R.styleable.DeveloperPreference_githubLink);
+            githubLink = typedArray.getString(R.styleable.DeveloperPreference_githubLink);
             devEmail = typedArray.getString(R.styleable.DeveloperPreference_emailDev);
         } finally {
             if (typedArray != null) {
                 typedArray.recycle();
             }
         }
-        WindowManager wm = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
-        mDisplay = wm.getDefaultDisplay();
-    }
 
-    @Override
-    protected View onCreateView(ViewGroup parent) {
-        super.onCreateView(parent);
+        /**
+         * Inflate views
+         */
 
-        View layout = View.inflate(getContext(), R.layout.dev_card, null);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View layout = inflater.inflate(R.layout.dev_card, this, true);
 
         gplusButton = (ImageView) layout.findViewById(R.id.gplus_button);
-	githubButton = (ImageView) layout.findViewById(R.id.github_button);
+        githubButton = (ImageView) layout.findViewById(R.id.github_button);
         devName = (TextView) layout.findViewById(R.id.name);
         photoView = (ImageView) layout.findViewById(R.id.photo);
 
-        return layout;
-    }
-
-    @Override
-    protected void onBindView(View view) {
-        super.onBindView(view);
-
+        /**
+         * Initialize buttons
+         */
         if (githubLink != null) {
             final OnClickListener openGithub = new OnClickListener() {
                 @Override
@@ -105,45 +114,36 @@ public class DeveloperPreference extends Preference {
             githubButton.setVisibility(View.GONE);
         }
 
+        if (gplusName != null) {
+            final OnClickListener openGplus = new OnClickListener() {
 
-            final OnPreferenceClickListener openGplus = new OnPreferenceClickListener() {
                 @Override
-                public boolean onPreferenceClick(Preference preference) {
-
-			if (gplusName != null) {
-
-	                    Uri gplusURL = Uri.parse("https://plus.google.com/+" + gplusName);
-        	            final Intent intent = new Intent(Intent.ACTION_VIEW, gplusURL);
-        	            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        	            getContext().startActivity(intent);
-
-			}
-        
-	            return true;
+                public void onClick(View v) {
+                    Uri gplusURL = Uri.parse("http://plus.google.com/#!/" + gplusName);
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, gplusURL);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    getContext().startActivity(intent);
                 }
             };
 
-            this.setOnPreferenceClickListener(openGplus);
-            UrlImageViewHelper.setUrlDrawable(this.photoView,
+	    // changed to clicking the preference to open gplus
+            // it was a hit or miss to click the gplus button
+            this.setOnClickListener(openGplus);
+	    UrlImageViewHelper.setUrlDrawable(this.photoView,
                     getGravatarUrl(devEmail),
                     R.drawable.ic_null,
-                    UrlImageViewHelper.CACHE_DURATION_ONE_WEEK);
-
-        if (gplusName == null)
-		gplusButton.setVisibility(View.INVISIBLE);
-
-
+		UrlImageViewHelper.CACHE_DURATION_ONE_WEEK);
+        } else {
+            gplusButton.setVisibility(View.INVISIBLE);
+            photoView.setVisibility(View.GONE);
+        }
         devName.setText(nameDev);
-
     }
 
     public String getGravatarUrl(String email) {
         try {
-            Point point = new Point();
-            mDisplay.getSize(point);
-            mDefaultAvatarSize = point.x;
             String emailMd5 = getMd5(email.trim().toLowerCase());
-            return String.format("%s%s?s=%d",
+            return String.format("%s%s?s=%d&d=mm",
                     GRAVATAR_API,
                     emailMd5,
                     mDefaultAvatarSize);
@@ -161,4 +161,4 @@ public class DeveloperPreference extends Preference {
             sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
         return sb.toString();
     }
-} 
+}

@@ -15,52 +15,76 @@
 	    android:title="@string/team_zephyr_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/scrollView">
+	    android:id="@+id/scrollView">
 
 	 <!-- Team Zephyr -->
-        <LinearLayout
-            android:id="@+id/devs">
+	<LinearLayout
+         android:id="@+id/devs"
+	 style="@style/settingsFragmentStyle"
+	 android:title="@string/team_zephyr">
 
-        <com.android.settings.widget.DeveloperPreference
+        <com.android.settings.widgets.DeveloperPreference
             android:title="StarkDroid"
             zephyr:nameDev="Trishiraj"
             zephyr:gplusHandle="StarkDroid"
             zephyr:githubLink="@string/github_StarkDroid"
-            zephyr:emailDev="gamerprince.exp@gmail.com"/>
+            zephyr:emailDev="gamerprince.exp@gmail.com"
+	    
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
 
-	<com.android.settings.widget.DeveloperPreference
+	<com.android.settings.widgets.DeveloperPreference
             android:title="Men_in_black007"
             zephyr:nameDev="Sanyam Jain"
             zephyr:gplusHandle="SanyamJain"
-            zephyr:emailDev="sanyam.53jain@gmail.com"/>
+            zephyr:emailDev="sanyam.53jain@gmail.com"
 
-        <com.android.settings.widget.DeveloperPreference
+ 	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
+
+        <com.android.settings.widgets.DeveloperPreference
             android:title="TheDerper"
             zephyr:nameDev="Akhil Narang"
             zephyr:gplusHandle="AkhilNarang"
-            zephyr:emailDev="akhil@akhilnarang.me"/>
+            zephyr:emailDev="akhil@akhilnarang.me"
 
-	<com.android.settings.widget.DeveloperPreference
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
+
+	<com.android.settings.widgets.DeveloperPreference
             android:title="srisurya95"
             zephyr:nameDev="Sri Harsha"
             zephyr:gplusHandle="Sri Harsha"
-            zephyr:emailDev="srisurya95@gmail.com"/>
+            zephyr:emailDev="srisurya95@gmail.com"
 
-        <com.android.settings.widget.DeveloperPreference
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
+
+        <com.android.settings.widgets.DeveloperPreference
             android:title="Shreesha Murthy"
             zephyr:nameDev="Shreesha"
             zephyr:gplusHandle="ShreeshaMurthy"
-            zephyr:emailDev="shreeshu10@gmail.com"/>
+            zephyr:emailDev="shreeshu10@gmail.com"
 
-        <com.android.settings.widget.DeveloperPreference
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
+
+        <com.android.settings.widgets.DeveloperPreference
             android:title="fAIyaZ"
             zephyr:nameDev="Faiyaz Sheth"
             zephyr:gplusHandle="Faiyaz Sheth"
-            zephyr:emailDev="Shethfaiyaz3@gmail.com"/>
+            zephyr:emailDev="Shethfaiyaz3@gmail.com"
 
-	<com.android.settings.widget.DeveloperPreference
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
+
+	<com.android.settings.widgets.DeveloperPreference
             android:title="Miradutta Pradhan"
             zephyr:nameDev="Miradutta Pradhan"
-            zephyr:emailDev="gaiaphage111@gmail.com"/>
-   </LinearLayout>
+            zephyr:emailDev="gaiaphage111@gmail.com"
+
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
+
+	</LinearLayout>
 </ScrollView>
