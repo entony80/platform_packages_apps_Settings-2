@@ -11,7 +11,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 */
-package com.android.settings.rr;
+package com.android.settings.zephyr;
 
 import android.app.Activity;
 import android.content.Context;

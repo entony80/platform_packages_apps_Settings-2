@@ -76,11 +76,9 @@
 
     <PreferenceScreen
         android:key="rr_tm"
-        android:fragment="com.android.settings.rr.TaskManagerSettings"
+        android:fragment="com.android.settings.zephyr.TaskManagerSettings"
         android:title="@string/enable_task_manager_title"
-        android:summary="@string/enable_task_manager_summary"
-        android:icon="@drawable/rr_tm_icon"
-       />
+        android:summary="@string/enable_task_manager_summary"/>
 
 <PreferenceCategory
         android:title="@string/qs_header_category" />

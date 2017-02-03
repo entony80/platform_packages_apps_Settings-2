@@ -20,7 +20,7 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/enable_task_manager_title">
 
-       <com.android.settings.Preference.SystemSettingSwitchPreference
+       <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="enable_task_manager"
         android:title="@string/enable_task_manager_title"
         android:summary="@string/enable_task_manager_summary" />
@@ -32,14 +32,14 @@
             android:entryValues="@array/task_manager_kill_button_values"
             android:dependency="enable_task_manager" />
 
-        <com.android.settings.Preference.SystemSettingSwitchPreference
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="task_manager_left_button"
             android:title="@string/task_manager_left_button_title"
             android:summary="@string/task_manager_left_button_summary"
             android:defaultValue="true"
             android:dependency="enable_task_manager" />
 
-        <com.android.settings.Preference.SystemSettingSwitchPreference
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="task_manager_right_button"
             android:title="@string/task_manager_right_button_title"
             android:summary="@string/task_manager_right_button_summary"
